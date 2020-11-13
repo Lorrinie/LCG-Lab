@@ -31,9 +31,6 @@
     <CopyFileToFolders Include="Teddybear.raw">
       <Filter>Resource Files</Filter>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="volume">
-      <Filter>Resource Files</Filter>
-    </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="PixelShader.hlsl">
@@ -42,5 +39,8 @@
     <FxCompile Include="VertexShader.hlsl">
       <Filter>Resource Files</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -134,7 +134,8 @@ public:
 	}
 
 	void buildVolumeData() {
-		std::ifstream file("volume", std::ios::ate | std::ios::binary);
+		//std::ifstream file("volume", std::ios::ate | std::ios::binary);
+		std::ifstream file("Teddybear.raw", std::ios::ate | std::ios::binary);
 
 		size_t fileSize = (size_t)file.tellg();
 
@@ -151,20 +152,20 @@ public:
 	}
 
 	~MyRenderFramework() {
-		mFactory->destoryVertexbuffer(mVertexBuffer);
-		mFactory->destoryIndexBuffer(mIndexBuffer);
-		mFactory->destoryConstantBuffer(mConstantBuffer);
+		mFactory->destroyVertexBuffer(mVertexBuffer);
+		mFactory->destroyIndexBuffer(mIndexBuffer);
+		mFactory->destroyConstantBuffer(mConstantBuffer);
 
-		mFactory->destoryInputLayout(mInputLayout);
-		mFactory->destoryVertexShader(mVertexShader);
-		mFactory->destoryPixelShader(mPixelShader);
+		mFactory->destroyInputLayout(mInputLayout);
+		mFactory->destroyVertexShader(mVertexShader);
+		mFactory->destroyPixelShader(mPixelShader);
 
-		mFactory->destoryRasterizerState(mRasterizerState);
-		mFactory->destoryDepthStencilState(mDepthStencilState);
+		mFactory->destroyRasterizerState(mRasterizerState);
+		mFactory->destroyDepthStencilState(mDepthStencilState);
 
-		mFactory->destoryTexture3D(mVolumeTexture);
+		mFactory->destroyTexture3D(mVolumeTexture);
 
-		mFactory->destoryResourceUsage(mVolumeUsage);
+		mFactory->destroyResourceUsage(mVolumeUsage);
 	}
 };
 
